@@ -4,6 +4,7 @@ module MakeFlaggable
 
     included do
       has_many :flaggings, :class_name => "MakeFlaggable::Flagging", :as => :flaggable
+      attr_readonly :flaggings_count
     end
 
     module ClassMethods
